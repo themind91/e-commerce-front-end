@@ -1,0 +1,44 @@
+<div class="container">
+
+    <h1>Category: {{currentCategoryName}}</h1>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Units in Stock</th>
+
+            </tr>
+            
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let tempProduct of products">
+                <td class="align-middle">
+                    <img src="{{tempProduct.imgUrl}}" height="50"/>
+                </td>
+                <td class="align-middle">{{tempProduct.name}}</td>
+                <td class="align-middle">{{tempProduct.unitPrice | currency:"USD"}}</td>
+                <td class="align-middle">{{tempProduct.unitsInStock}}</td>
+            </tr>
+        </tbody>
+        
+    </table>
+
+</div>
+
+
+	<!-- END PAGE CONTAINER-->
+
+
+	<footer>
+		<ul>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact Us</a></li>
+			<li><a href="#">Help</a></li>
+		</ul>
+	</footer>
+
+
